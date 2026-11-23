@@ -11,7 +11,7 @@ load_dotenv(Path(__file__).resolve().parent.parent / ".env", override=False)
 def required_env(name):
     value = os.environ.get(name)
     if not value:
-        raise ImproperlyConfigured(f"{name} need to configure in .env")
+        raise ImproperlyConfigured(f"{name} is required")
     return value
 
 
